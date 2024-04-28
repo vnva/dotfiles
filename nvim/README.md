@@ -1,1 +1,1 @@
-# vnva's nvim config
+# ⛺️ vnva's nvim configuration
