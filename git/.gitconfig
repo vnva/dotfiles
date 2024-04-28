@@ -1,0 +1,7 @@
+[user]
+	email = vnva.dev@gmail.com
+	name = Vyacheslav Ananev
+[core]
+	editor = nvim
+[push]
+	default = current
