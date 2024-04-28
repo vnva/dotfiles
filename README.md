@@ -2,7 +2,7 @@
 
 ## Usage
 
-Clone repo
+Clone the repository
 
 ```sh
 git clone git@github.com:vnva/dotfiles.git ~/.dotfiles
