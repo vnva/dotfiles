@@ -11,6 +11,8 @@
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - App launcher: [Wofi](https://hg.sr.ht/~scoopta/wofi)
 
+![Screenshot](/screenshot.png)
+
 ## Usage
 
 Clone the repository
