@@ -11,7 +11,7 @@ git clone git@github.com:vnva/dotfiles.git ~/.dotfiles
 Link the dotfiles
 
 ```sh
-ln -sf ~/git/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
 
 ln -sf ~/.dotfiles/nvim ~/.config/nvim
 ln -sf ~/.dotfiles/alacritty ~/.config/alacritty
