@@ -1,5 +1,6 @@
 export ZDOTDIR=~/.dotfiles/zsh
 export EDITOR=nvim
+export PATH="$HOME/.dotfiles/bin:$PATH"
 
 # history options
 export HISTFILE=~/.zsh_history
@@ -41,5 +42,7 @@ export STARSHIP_CONFI=$ZDOTDIR/starship/starship.toml
 eval "$(starship init zsh)"
 
 # aliases
+alias v='nvim'
 alias d='nvim ~/.dotfiles'
 alias cdd='cd ~/.dotfiles'
+
