@@ -38,7 +38,7 @@ case ":$PATH:" in
 esac
 
 # load startship
-export STARSHIP_CONFI=$ZDOTDIR/starship/starship.toml
+export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
 eval "$(starship init zsh)"
 
 # aliases
