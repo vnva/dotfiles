@@ -45,4 +45,3 @@ eval "$(starship init zsh)"
 alias v='nvim'
 alias d='nvim ~/.dotfiles'
 alias cdd='cd ~/.dotfiles'
-
