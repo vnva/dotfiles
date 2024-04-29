@@ -1,0 +1,23 @@
+format = """$character"""
+right_format = """$all"""
+add_newline = false
+
+[battery]
+disabled = true
+
+[aws]
+disabled = true
+
+[nodejs]
+symbol = "[󰋘 ](green) "
+
+[character]
+format = "$symbol  "
+success_symbol = "[](green)"
+error_symbol = "[](red)"
+
+[git_branch]
+symbol = " "
+
+[package]
+symbol = "  "

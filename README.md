@@ -39,7 +39,6 @@ Modules
 
 ## Plans
 
-- Add shell configuration
 - Add Wofi configuration
 - Add Waybar configuration for each devices
 - Add Ansible playbooks for devices
