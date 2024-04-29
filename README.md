@@ -7,12 +7,13 @@
 Clone the repository
 
 ```sh
-git clone git@github.com:vnva/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules git@github.com:vnva/dotfiles.git ~/.dotfiles
 ```
 
 Link the dotfiles
 
 ```sh
+ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/nvim ~/.config/nvim
 ln -sf ~/.dotfiles/alacritty ~/.config/alacritty
