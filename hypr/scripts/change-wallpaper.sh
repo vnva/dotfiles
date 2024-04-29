@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wallpaper=~/.dotfiles/wallpapers/.wallpaper
+unlink $wallpaper
+ln -sf $1 $wallpaper
+killall -e hyprpaper & sleep 1; hyprpaper >/dev/null &
