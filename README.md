@@ -1,4 +1,4 @@
-# ⛺️ vnva's dotfiles
+# 🎲 vnva's dotfiles
 
 ![Screenshot](/screenshot.png)
 
