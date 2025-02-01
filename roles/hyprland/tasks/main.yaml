@@ -3,15 +3,28 @@
   become: true
   community.general.pacman:
     name:
+      # Core
       - hyprland
       - hyprpaper
       - hyprlock
+
+      # Utils
       - jq
       - swappy
       - wl-clipboard
       - slurp
       - grim
       - nwg-displays
+
+      # Theming
+      - qt5ct
+      - qt6ct
+      - kvantum
+      - kvantum-qt5
+
+      # Themes
+      - kvantum-theme-materia
+      - materia-gtk-theme
   when: ansible_distribution == "Archlinux"
 
 - name: Install hyprland aur packages
@@ -20,8 +33,6 @@
       # Cursors
       - rose-pine-cursor
       - rose-pine-hyprcursor
-
-      # Themes
     executable: yay
     extra_args: --builddir /var/cache/yay
   when: ansible_distribution == "Archlinux"

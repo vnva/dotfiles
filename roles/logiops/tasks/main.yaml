@@ -21,10 +21,9 @@
     dest: /etc/logid.cfg
     state: link
     force: true
-
-- name: Run logid systemd service
-  become: true
-  ansible.builtin.systemd:
-    name: logid.service
-    state: started
-    enabled: true
+# - name: Run logid systemd service
+#   become: true
+#   ansible.builtin.systemd:
+#     name: logid.service
+#     state: started
+#     enabled: true

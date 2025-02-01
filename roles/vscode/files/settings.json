@@ -2,7 +2,7 @@
   // UI Settings
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "hidden",
-  "workbench.colorTheme": "Moegi Black",
+  "workbench.colorTheme": "GitHub Dark",
 
   // Fonts
   "editor.fontFamily": "ZedMono Nerd Font",
@@ -32,5 +32,6 @@
 
   // Extensions
   "cSpell.enabled": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark"
 }
