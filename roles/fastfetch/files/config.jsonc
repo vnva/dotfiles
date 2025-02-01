@@ -1,0 +1,53 @@
+{
+  "logo": {
+    "type": "file",
+    "source": "~/dotfiles/roles/fastfetch/files/logos/vnva"
+  },
+  "display": {
+    "key": {
+      "width": 12
+    }
+  },
+  "modules": [
+    {
+      "type": "os",
+      "key": "os"
+    },
+    {
+      "type": "host",
+      "key": "host"
+    },
+    {
+      "type": "packages",
+      "key": "packages"
+    },
+    {
+      "type": "shell",
+      "key": "shell"
+    },
+    {
+      "type": "display",
+      "key": "display"
+    },
+    {
+      "type": "wm",
+      "key": "wm"
+    },
+    {
+      "type": "terminal",
+      "key": "terminal"
+    },
+    {
+      "type": "cpu",
+      "key": "cpu"
+    },
+    {
+      "type": "gpu",
+      "key": "gpu"
+    },
+    {
+      "type": "memory",
+      "key": "memory"
+    }
+  ]
+}

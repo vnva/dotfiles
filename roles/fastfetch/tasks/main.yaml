@@ -1,0 +1,20 @@
+---
+- name: Install fastfetch package
+  become: true
+  community.general.pacman:
+    name: fastfetch
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Ensure .config/fastfetch directory exists
+  ansible.builtin.file:
+    path: ~/.config/fastfetch
+    state: directory
+    mode: "0755"
+
+- name: Deploy fastfetch config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/config.jsonc"
+    dest: ~/.config/fastfetch/config.jsonc
+    state: link
+    force: true

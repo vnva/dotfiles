@@ -1,15 +1,16 @@
 default_roles:
- - xdg-user-dirs
- - ansible
- - hyprland
- - nvim
- - ghostty
- - vscode
- - chrome
- - starship
- - zsh
- - pnpm
- - git
+  - xdg-user-dirs
+  - ansible
+  - hyprland
+  - nvim
+  - ghostty
+  - vscode
+  - chrome
+  - starship
+  - zsh
+  - pnpm
+  - git
+  - fastfetch
 
 git:
   name: Vyacheslav Ananev

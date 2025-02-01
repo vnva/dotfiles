@@ -19,9 +19,16 @@
   "files.insertFinalNewline": true,
   "git.openRepositoryInParentFolders": "always",
   "editor.formatOnSave": true,
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Prettier
+  "prettier.enable": true,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": false,
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
 
   // Extensions
   "cSpell.enabled": false,

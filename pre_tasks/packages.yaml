@@ -63,6 +63,8 @@
       # Apps
       - firefox
       - telegram-desktop
+      - obs-studio
+      - obsidian
     state: latest
   when: ansible_distribution == "Archlinux"
 
