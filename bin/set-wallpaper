@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+source $HOME/dotfiles/roles/zsh/files/variables.sh
+
+if [ -z "$1" ]; then
+    echo "Error: Debes proporcionar el path del wallpaper \$1."
+    exit 1
+fi
+
+# Muy manual pero ya buscaré una manera mas sofisticada
+
+echo '' >"$HYPR_DIR/hyprpaper.conf"
+echo "preload = $1" >>"$HYPR_DIR/hyprpaper.conf"
+echo "wallpaper =,$1" >>"$HYPR_DIR/hyprpaper.conf"
+echo "splash = false" >>"$HYPR_DIR/hyprpaper.conf"
+
+killall hyprpaper
+hyprpaper &>/dev/null &
+disown
+
+exit 0

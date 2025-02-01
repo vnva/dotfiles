@@ -1,6 +1,8 @@
 export ZDOTDIR=~/dotfiles/roles/zsh/files
 export EDITOR=nvim
 
+source $HOME/dotfiles/roles/zsh/files/variables.sh
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 export TEMP_ZSH_DIR=~/.temp/zsh

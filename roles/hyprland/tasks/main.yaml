@@ -39,7 +39,7 @@
 
 - name: Deploy hyprland config
   ansible.builtin.file:
-    src: "{{ role_path }}/files/hypr-{{ ansible_facts['nodename'] }}"
+    src: "{{ role_path }}/files/hypr"
     dest: ~/.config/hypr
     state: link
     force: true
