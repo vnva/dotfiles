@@ -59,5 +59,18 @@
 
       # Fonts
       - ttf-zed-mono-nerd
+
+      # Apps
+      - firefox
+      - telegram-desktop
     state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Install zero-config aur packages
+  community.general.pacman:
+    name:
+      - aws-cli-v2-bin
+    state: latest
+    executable: yay
+    extra_args: --builddir /var/cache/yay
   when: ansible_distribution == "Archlinux"
