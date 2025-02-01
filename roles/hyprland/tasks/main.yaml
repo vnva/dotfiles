@@ -15,6 +15,19 @@
     state: latest
   when: ansible_distribution == "Archlinux"
 
+- name: Install hyprland aur packages
+  community.general.pacman:
+    name:
+      # Cursors
+      - rose-pine-cursor
+      - rose-pine-hyprcursor
+
+      # Themes
+    state: latest
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  when: ansible_distribution == "Archlinux"
+
 - name: Deploy hyprland config
   ansible.builtin.file:
     src: "{{ role_path }}/files/hypr-{{ ansible_facts['nodename'] }}"

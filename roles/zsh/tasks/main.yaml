@@ -8,7 +8,7 @@
 
 - name: Deploy .zshrc
   ansible.builtin.file:
-    src: "{{ role_path }}/files/zshrc.zsh"
+    src: "{{ role_path }}/files/.zshrc"
     dest: ~/.zshrc
     state: link
     force: true
