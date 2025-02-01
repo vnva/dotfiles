@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# check ags is running
+ags_pid=$(pgrep ags >/dev/null 2>&1)
+
+# if ags is running, restart it
+if [ -n "$ags_pid" ]; then
+    echo "Restarting ags..."
+    ags quit
+    ags-start
+else
+    echo "ags is not running"
+fi

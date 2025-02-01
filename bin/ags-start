@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ags run -d $HOME/dotfiles/roles/ags/files/ags/build &
+disown

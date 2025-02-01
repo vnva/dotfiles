@@ -21,6 +21,10 @@
   "editor.formatOnSave": true,
   "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" },
   "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 
   // Prettier
   "prettier.enable": true,

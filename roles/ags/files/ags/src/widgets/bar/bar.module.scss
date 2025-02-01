@@ -1,0 +1,23 @@
+.bar {
+  background: transparent;
+}
+
+.bar-item {
+  background: $c-bg-alpha;
+  border-radius: $v-border-radius-md;
+  padding: $v-spacing-sm $v-spacing-md;
+}
+
+.bar-battery {
+  &-low {
+    @include blink-animation($c-danger, $c-bg-alpha);
+  }
+
+  &-charging {
+    @include blink-animation($c-success, $c-bg-alpha);
+  }
+
+  &-pending-charge {
+    background: $c-success;
+  }
+}

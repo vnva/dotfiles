@@ -3,3 +3,15 @@
   kewlfft.aur.aur:
     name: aylurs-gtk-shell
   when: ansible_distribution == "Archlinux"
+
+- name: Install ags dependencies and build
+  ansible.builtin.shell: |
+    ags-build
+  when: ansible_distribution == "Archlinux"
+  changed_when: false
+
+- name: Restart ags if it's running
+  ansible.builtin.shell: |
+    ags-restart
+  when: ansible_distribution == "Archlinux"
+  changed_when: false

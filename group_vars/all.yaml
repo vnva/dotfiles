@@ -1,6 +1,10 @@
 default_roles:
+  - git
   - ly
   - tlp
+  - zsh
+  - starship
+  - pnpm
   - xdg-user-dirs
   - ansible
   - ags
@@ -9,16 +13,11 @@ default_roles:
   - ghostty
   - vscode
   - chrome
-  - starship
-  - zsh
-  - pnpm
-  - git
   - fastfetch
   - beekeeper
   - spotify
   - insomnia
   - logiops
-  - tlp
 
 git:
   name: Vyacheslav Ananev
