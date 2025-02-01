@@ -20,15 +20,14 @@
     PNPM_VERSION: "10.0.0"
   when: pnpm_home_check.stdout == ""
 
-- name: Check if node binary exists
-  ansible.builtin.shell: |
-    command -v node
-  register: node_check
-  ignore_errors: true
-  changed_when: false
-
+# - name: Check if node binary exists
+#   ansible.builtin.shell: |
+#     command -v node
+#   register: node_check
+#   ignore_errors: true
+#   changed_when: false
 # https://pnpm.io/cli/env
-- name: Install latest node version
+- name: Install node
   ansible.builtin.shell: |
-    pnpm env use --global latest
-  when: node_check.rc != 0
+    pnpm env use --global 22
+  # when: node_check.rc != 0
