@@ -1,3 +1,12 @@
+---
+- name: Install google-chrome package
+  community.general.pacman:
+    name: google-chrome
+    state: latest
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  when: ansible_distribution == "Archlinux"
+
 - name: Deploy google-chrome chrome-flags.conf
   ansible.builtin.file:
     src: "{{ role_path }}/files/chrome-flags.conf"

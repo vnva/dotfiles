@@ -45,6 +45,19 @@
   become: true
   community.general.pacman:
     name:
+      # CLI Tools
       - bat
+      - curl
+
+      # Audio
+      - pipewire
+      - pipewire-pulse
+      - pipewire-jack
+      - pipewire-audio
+      - pipewire-session-manager
+      - pavucontrol
+
+      # Fonts
+      - ttf-zed-mono-nerd
     state: latest
   when: ansible_distribution == "Archlinux"
