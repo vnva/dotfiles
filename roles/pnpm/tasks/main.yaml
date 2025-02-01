@@ -10,7 +10,7 @@
   ansible.builtin.shell: |
     echo $PNPM_HOME
   register: pnpm_home_check
-  changed_when: false  
+  changed_when: false
 
 # https://pnpm.io/installation
 - name: Install standalone pnpm package

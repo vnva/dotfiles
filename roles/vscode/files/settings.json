@@ -18,6 +18,10 @@
   // Editing
   "files.insertFinalNewline": true,
   "git.openRepositoryInParentFolders": "always",
+  "editor.formatOnSave": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 
   // Extensions
   "cSpell.enabled": false,
