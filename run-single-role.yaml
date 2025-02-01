@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: true
+
+  tasks:
+    - name: Run {{ role }} role
+      ansible.builtin.include_role:
+        name: "{{ role }}"

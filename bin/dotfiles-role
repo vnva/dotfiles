@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DOTFILES_DIR="$HOME/dotfiles"
+
+cd $DOTFILES_DIR
+
+ansible-playbook $DOTFILES_DIR/run-single-role.yaml -e "role=$1"

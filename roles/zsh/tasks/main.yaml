@@ -6,10 +6,8 @@
   when: ansible_distribution == "Archlinux"
 
 - name: Install carapace-bin package for autocomplete
-  community.general.pacman:
+  kewlfft.aur.aur:
     name: carapace-bin
-    executable: yay
-    extra_args: --builddir /var/cache/yay
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy .zshrc

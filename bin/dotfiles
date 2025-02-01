@@ -12,4 +12,4 @@ cd $DOTFILES_DIR
 
 git pull
 
-ansible-playbook $DOTFILES_DIR/playbook.yaml
+ansible-playbook $DOTFILES_DIR/playbook.yaml $@

@@ -28,13 +28,11 @@
   when: ansible_distribution == "Archlinux"
 
 - name: Install hyprland aur packages
-  community.general.pacman:
+  kewlfft.aur.aur:
     name:
       # Cursors
       - rose-pine-cursor
       - rose-pine-hyprcursor
-    executable: yay
-    extra_args: --builddir /var/cache/yay
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy hyprland config

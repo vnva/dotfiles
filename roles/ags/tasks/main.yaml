@@ -1,0 +1,5 @@
+---
+- name: Install ags package
+  kewlfft.aur.aur:
+    name: aylurs-gtk-shell
+  when: ansible_distribution == "Archlinux"
