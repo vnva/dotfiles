@@ -3,7 +3,6 @@
   become: true
   community.general.pacman:
     name: fastfetch
-    state: latest
   when: ansible_distribution == "Archlinux"
 
 - name: Ensure .config/fastfetch directory exists

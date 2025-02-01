@@ -3,5 +3,4 @@
   become: true
   community.general.pacman:
     name: neovim
-    state: latest
   when: ansible_distribution == "Archlinux"

@@ -3,7 +3,6 @@
   become: true
   community.general.pacman:
     name: zsh
-    state: latest
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy .zshrc

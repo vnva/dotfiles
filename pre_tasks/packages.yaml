@@ -1,4 +1,10 @@
 ---
+- name: Ensure ~/.local/share/applications exists
+  ansible.builtin.file:
+    path: ~/.local/share/applications
+    state: directory
+    mode: 0755
+
 - name: Check yay is installed
   ansible.builtin.shell: |
     command -v yay
@@ -13,7 +19,6 @@
     name:
       - git
       - base-devel
-    state: latest
   when: ansible_distribution == "Archlinux"
 
 - name: Create a temporary directory for building yay

@@ -1,0 +1,14 @@
+---
+- name: Install spotify package
+  community.general.pacman:
+    name: spotify
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy spotify.desktop
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/spotify.desktop"
+    dest: ~/.local/share/applications/spotify.desktop
+    state: link
+    force: true

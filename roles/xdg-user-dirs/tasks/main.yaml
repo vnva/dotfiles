@@ -3,7 +3,6 @@
   become: true
   community.general.pacman:
     name: xdg-user-dirs
-    state: latest
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy xdg-user-dirs config

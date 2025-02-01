@@ -11,6 +11,9 @@ default_roles:
   - pnpm
   - git
   - fastfetch
+  - beekeeper
+  - spotify
+  - insomnia
 
 git:
   name: Vyacheslav Ananev
