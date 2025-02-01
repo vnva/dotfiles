@@ -1,0 +1,37 @@
+---
+- name: Set should enable tlp fact
+  ansible.builtin.shell: |
+    echo {{ ansible_facts['nodename'] == 'vnva-zenbook' and ansible_facts['distribution'] == 'Archlinux' }}
+  register: should_enable_tlp
+  changed_when: false
+
+- name: Install tlp package
+  become: true
+  community.general.pacman:
+    name: tlp
+  when: should_enable_tlp.stdout == "true"
+
+- name: Try disable tlp service
+  become: true
+  ansible.builtin.systemd:
+    name: tlp
+    state: stopped
+    enabled: false
+  when: should_enable_tlp.stdout == "true"
+
+- name: Deploy tlp config
+  become: true
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/{{ ansible_facts['nodename'] }}-tlp.conf"
+    dest: /etc/tlp.conf
+    state: link
+    force: true
+  when: should_enable_tlp.stdout == "true"
+
+- name: Run tlp systemd service
+  become: true
+  ansible.builtin.systemd:
+    name: tlp
+    state: started
+    enabled: true
+  when: should_enable_tlp.stdout == "true"

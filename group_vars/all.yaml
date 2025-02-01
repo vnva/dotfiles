@@ -1,5 +1,6 @@
 default_roles:
   - ly
+  - tlp
   - xdg-user-dirs
   - ansible
   - hyprland
@@ -16,6 +17,7 @@ default_roles:
   - spotify
   - insomnia
   - logiops
+  - tlp
 
 git:
   name: Vyacheslav Ananev
