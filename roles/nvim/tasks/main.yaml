@@ -4,3 +4,10 @@
   community.general.pacman:
     name: neovim
   when: ansible_distribution == "Archlinux"
+
+- name: Deploy nvim config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/nvim"
+    dest: ~/.config/nvim
+    state: link
+    force: true
