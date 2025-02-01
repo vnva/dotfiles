@@ -1,0 +1,50 @@
+---
+- name: Check yay is installed
+  ansible.builtin.shell: |
+    command -v yay
+  register: yay_check
+  ignore_errors: true
+  changed_when: false
+  when: ansible_distribution == "Archlinux"
+
+- name: Install yay dependencies
+  become: true
+  community.general.pacman:
+    name:
+      - git
+      - base-devel
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Create a temporary directory for building yay
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: yay
+  register: yay_build_dir
+  when: ansible_distribution == "Archlinux" and yay_check.rc != 0
+
+- name: Clone yay repository
+  ansible.builtin.git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: "{{ yay_build_dir.path }}"
+  when: ansible_distribution == "Archlinux" and yay_check.rc != 0
+
+- name: Build yay
+  ansible.builtin.command:
+    cmd: makepkg -si --noconfirm
+    chdir: "{{ yay_build_dir.path }}"
+  when: ansible_distribution == "Archlinux" and yay_check.rc != 0
+
+- name: Clean up yay build directory
+  ansible.builtin.file:
+    path: "{{ yay_build_dir.path }}"
+    state: absent
+  when: ansible_distribution == "Archlinux" and yay_check.rc != 0
+
+- name: Install zero-config packages
+  become: true
+  community.general.pacman:
+    name:
+      - bat
+    state: latest
+  when: ansible_distribution == "Archlinux"

@@ -1,0 +1,34 @@
+---
+- name: Remove pnpm package
+  become: true
+  community.general.pacman:
+    name: pnpm
+    state: absent
+  when: ansible_distribution == "Archlinux"
+
+- name: Check if PNPM_HOME is set
+  ansible.builtin.shell: |
+    echo $PNPM_HOME
+  register: pnpm_home_check
+  changed_when: false  
+
+# https://pnpm.io/installation
+- name: Install standalone pnpm package
+  ansible.builtin.shell: |
+    curl -fsSL https://get.pnpm.io/install.sh | sh -
+  environment:
+    PNPM_VERSION: "10.0.0"
+  when: pnpm_home_check.stdout == ""
+
+- name: Check if node binary exists
+  ansible.builtin.shell: |
+    command -v node
+  register: node_check
+  ignore_errors: true
+  changed_when: false
+
+# https://pnpm.io/cli/env
+- name: Install latest node version
+  ansible.builtin.shell: |
+    pnpm env use --global latest
+  when: node_check.rc != 0

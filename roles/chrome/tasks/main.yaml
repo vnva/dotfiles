@@ -1,0 +1,6 @@
+- name: Deploy google-chrome chrome-flags.conf
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/chrome-flags.conf"
+    dest: ~/.config/chrome-flags.conf
+    state: link
+    force: true

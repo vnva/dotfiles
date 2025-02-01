@@ -1,0 +1,10 @@
+theme = "/usr/share/ghostty/themes/ayu"
+cursor-style = bar
+
+font-family = "ZedMono Nerd Font"
+font-size = 14
+
+window-padding-x = 10,10
+window-padding-y = 10,10
+
+confirm-close-surface = false

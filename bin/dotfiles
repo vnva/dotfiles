@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DOTFILES_DIR="$HOME/dotfiles"
+
+update_ansible_galaxy() {
+  ansible-galaxy install -r $DOTFILES_DIR/requirements/common.yaml $os_requirements > /dev/null
+}
+
+update_ansible_galaxy
+
+cd $DOTFILES_DIR
+ansible-playbook $DOTFILES_DIR/playbook.yaml

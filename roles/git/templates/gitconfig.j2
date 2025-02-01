@@ -1,0 +1,20 @@
+[user]
+  name = {{ git.name }}
+  email = {{ git.email }}
+
+[core]
+  editor = {{ git.editor | default('nvim') }}
+  excludesfile = ~/.gitignore_global
+  untrackedCache = true
+
+[push]
+  default = current
+
+[init]
+  defaultBranch = {{ git.default_branch | default('main') }}
+
+[alias]
+  st = status -sb
+  co = checkout
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

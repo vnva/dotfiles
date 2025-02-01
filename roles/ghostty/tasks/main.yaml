@@ -1,0 +1,14 @@
+---
+- name: Install ghostty package
+  become: true
+  community.general.pacman:
+    name: ghostty
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy ghostty config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/ghostty"
+    dest: ~/.config/ghostty
+    state: link
+    force: true

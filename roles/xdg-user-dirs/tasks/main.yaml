@@ -1,0 +1,34 @@
+---
+- name: Install xdg-user-dirs package
+  become: true
+  community.general.pacman:
+    name: xdg-user-dirs
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy xdg-user-dirs config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/user-dirs.dirs"
+    dest: ~/.config/user-dirs.dirs
+    state: link
+    force: true
+
+- name: Create xdg-user-dirs dirs
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  loop:
+    - ~/desktop
+    - ~/documents
+    - ~/downloads
+    - ~/music
+    - ~/pictures
+    - ~/public
+    - ~/templates
+    - ~/videos
+  register: create_dirs_result
+
+- name: Apply xdg-user-dirs
+  ansible.builtin.command: xdg-user-dirs-update
+  when: create_dirs_result is changed

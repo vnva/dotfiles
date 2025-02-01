@@ -1,0 +1,25 @@
+{
+  // UI Settings
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "hidden",
+  "workbench.colorTheme": "Moegi Black",
+
+  // Fonts
+  "editor.fontFamily": "ZedMono Nerd Font",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "ZedMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontLigatures": true,
+
+  // Misc
+  "keyboard.dispatch": "keyCode",
+
+  // Editing
+  "files.insertFinalNewline": true,
+  "git.openRepositoryInParentFolders": "always",
+
+  // Extensions
+  "cSpell.enabled": false,
+  "workbench.startupEditor": "none"
+}

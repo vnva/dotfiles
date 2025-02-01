@@ -1,0 +1,7 @@
+---
+- name: Configure .gitconfig
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/gitconfig.j2"
+    dest: ~/.gitconfig
+    mode: 0644
+    force: true

@@ -1,0 +1,18 @@
+default_roles:
+ - xdg-user-dirs
+ - ansible
+ - hyprland
+ - nvim
+ - ghostty
+ - vscode
+ - chrome
+ - starship
+ - zsh
+ - pnpm
+ - git
+
+git:
+  name: Vyacheslav Ananev
+  email: vnva.dev@gmail.com
+  editor: nvim
+  default_branch: main

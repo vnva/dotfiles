@@ -1,0 +1,14 @@
+---
+- name: Install zsh package
+  become: true
+  community.general.pacman:
+    name: zsh
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy .zshrc
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/zshrc.zsh"
+    dest: ~/.zshrc
+    state: link
+    force: true

@@ -1,0 +1,21 @@
+---
+- name: Deploy vscode code-flags.conf
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/code-flags.conf"
+    dest: ~/.config/code-flags.conf
+    state: link
+    force: true
+
+- name: Deploy vscode settings.json
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/settings.json"
+    dest: ~/.config/Code/User/settings.json
+    state: link
+    force: true
+
+- name: Deploy vscode keybindings.json
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/keybindings.json"
+    dest: ~/.config/Code/User/keybindings.json
+    state: link
+    force: true

@@ -1,0 +1,15 @@
+---
+- name: Install starship package
+  become: true
+  community.general.pacman:
+    name: starship
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
+
+- name: Deploy starship config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/starship.toml"
+    dest: ~/.config/starship.toml
+    state: link
+    force: true
