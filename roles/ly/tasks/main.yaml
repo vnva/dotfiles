@@ -1,0 +1,12 @@
+---
+- name: Install ly package
+  community.general.pacman:
+    name: ly
+  when: ansible_distribution == "Archlinux"
+
+- name: Enable ly systemd service
+  become: true
+  ansible.builtin.systemd:
+    name: ly.service
+    state: started
+    enabled: true

@@ -1,4 +1,5 @@
 default_roles:
+  - ly
   - xdg-user-dirs
   - ansible
   - hyprland
