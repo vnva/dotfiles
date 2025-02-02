@@ -1,8 +1,6 @@
-# 🎲 vnva's dotfiles
+# vnva's dotfiles
 
 My personal dotfiles managed with [Ansible](https://www.ansible.com/).
-
-![Screenshot](/assets/screenshot.png)
 
 ## Installation
 
