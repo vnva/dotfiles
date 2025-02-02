@@ -7,7 +7,7 @@
   // Fonts
   "editor.fontFamily": "ZedMono Nerd Font",
   "editor.fontSize": 14,
-  "terminal.integrated.fontFamily": "ZedMono Nerd Font",
+  "terminal.integrated.fontFamily": "'ZedMono Nerd Font'",
   "terminal.integrated.fontSize": 14,
   "editor.fontLigatures": true,
   "terminal.integrated.fontLigatures": true,

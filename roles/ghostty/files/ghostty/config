@@ -1,6 +1,5 @@
 # UI
-
-theme = "ayu"
+theme = "GitHub-Dark-Dimmed"
 cursor-style = bar
 
 window-padding-x = 10,10

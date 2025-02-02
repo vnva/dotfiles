@@ -2,13 +2,13 @@ import { bind } from 'astal/binding';
 import BatteryModule from 'gi://AstalBattery';
 
 import { BarItem } from './bar-item';
-import { NERD_ICON, NerdIcon } from '../../utils/constants';
+import { NERD_ICON, NerdIconDirection } from '../../utils/constants';
 import css from './bar.module.scss';
 import { mergeBindings } from '../../utils/bindings';
 
 const battery = BatteryModule.get_default();
 
-function getBatteryIcon(percentage: number): NerdIcon {
+function getBatteryIcon(percentage: number): NerdIconDirection {
   if (percentage < 0.15) return NERD_ICON.BAT0;
   if (percentage < 0.3) return NERD_ICON.BAT1;
   if (percentage < 0.5) return NERD_ICON.BAT2;

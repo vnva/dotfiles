@@ -6,11 +6,18 @@ import css from './bar.module.scss';
 import { BarItem } from './bar-item';
 import { Time } from './bar-time';
 import { Battery } from './bar-battery';
+import { BarWorkspaces } from './bar-workspaces';
 
-function BarLeft(): JSX.Element {
+interface BarLeftProps {
+  monitor: number;
+}
+
+function BarLeft(props: BarLeftProps): JSX.Element {
+  const { monitor } = props;
+
   return (
     <box halign={Gtk.Align.START}>
-      <BarItem>workspaces</BarItem>
+      <BarWorkspaces monitor={monitor} />
     </box>
   );
 }
@@ -44,7 +51,7 @@ export function Bar(props: BarProps) {
       marginTop={10}
     >
       <centerbox hexpand>
-        <BarLeft />
+        <BarLeft monitor={props.monitor} />
         <BarCenter />
         <BarRight />
       </centerbox>

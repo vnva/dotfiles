@@ -5,7 +5,7 @@
 .bar-item {
   background: $c-bg-alpha;
   border-radius: $v-border-radius-md;
-  padding: $v-spacing-sm $v-spacing-md;
+  padding: $v-spacing-xs $v-spacing-md;
 }
 
 .bar-battery {
@@ -19,5 +19,15 @@
 
   &-pending-charge {
     background: $c-success;
+  }
+}
+
+.bar-workspaces {
+  &-item {
+    @extend .bar-item;
+  }
+
+  &-item-focused {
+    background: $c-primary;
   }
 }

@@ -1,6 +1,7 @@
 // variables
 $v-alpha: 0.8;
 $v-border-radius-md: 4px;
+$v-spacing-xs: 2px;
 $v-spacing-sm: 4px;
 $v-spacing-md: 8px;
 
@@ -8,20 +9,26 @@ $v-spacing-md: 8px;
 $c-contrast: #fff;
 $c-foreground: #fff;
 $c-bg-alpha: rgba(0, 0, 0, $v-alpha);
-$c-primary: #326da8;
+$c-primary: #204d65;
 $c-secondary: #e7e7e7;
 $c-secondary-foreground: #000;
 $c-danger: #e53935;
 $c-success: #43a047;
 
 // typography
-$f-md: 12px;
+$f-md: 13px;
 $f-w-md: 400;
 $f-w-lg: 600;
 
 * {
-  font-family: 'Inter';
+  font-family: 'Inter', 'ZedMono Nerd Font', monospace;
   font-size: $f-md;
+}
+
+button {
+  background: unset;
+  border: unset;
+  padding: unset;
 }
 
 @mixin blink-animation($colorA, $colorB) {

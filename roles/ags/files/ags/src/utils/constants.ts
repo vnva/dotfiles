@@ -11,16 +11,25 @@ const NERD_ICON_MAP = {
   BAT2: '',
   BAT3: '',
   BAT4: '',
+  TELEGRAM: '',
+  VSCODE: '',
+  GHOSTTY: '󰊠',
+  CHROME: '',
+  SCREEN_CAPTURE: '',
+  WINDOW: '',
+  SPOTIFY: '',
 };
 
-export interface NerdIcon {
+export interface NerdIconDirection {
   L: string;
   R: string;
   LR: string;
   N: string;
 }
 
-type NerdIconsList = Record<keyof typeof NERD_ICON_MAP, NerdIcon>;
+export type NerdIcon = keyof typeof NERD_ICON_MAP;
+
+type NerdIconsList = Record<keyof typeof NERD_ICON_MAP, NerdIconDirection>;
 
 export const NERD_ICON: NerdIconsList = Object.fromEntries(
   Object.entries(NERD_ICON_MAP).map(([key, value]) => {
