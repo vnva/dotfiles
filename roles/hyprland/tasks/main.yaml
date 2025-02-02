@@ -9,12 +9,12 @@
       - hyprlock
 
       # Utils
-      - jq
-      - swappy
-      - wl-clipboard
-      - slurp
-      - grim
-      - nwg-displays
+      - jq # JSON parser
+      - swappy # Screenshot editor
+      - wl-clipboard # Clipboard manager
+      - slurp # Screenshot capture
+      - grim # Screenshot capture
+      - nwg-displays # Display manager
 
       # Theming
       - qt5ct
@@ -33,13 +33,14 @@
 - name: Install hyprland aur packages
   kewlfft.aur.aur:
     name:
-      # Cursors
+      # Best cursors
       - rose-pine-cursor
       - rose-pine-hyprcursor
 
       # Apps
       - pwvucontrol # Volume control
       - overskride-bin # Bluetooth
+      - loupe # View images
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy hyprland config
@@ -55,6 +56,7 @@
     name:
       - xdg-desktop-portal
       - xdg-desktop-portal-hyprland
+      # Only for gtk theme
       - xdg-desktop-portal-gnome
       - xdg-desktop-portal-gtk
       - xdg-desktop-portal-wlr
