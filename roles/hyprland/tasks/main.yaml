@@ -22,9 +22,12 @@
       - kvantum
       - kvantum-qt5
 
-      # Themes
-      - kvantum-theme-materia
-      - materia-gtk-theme
+      # Gnome packages
+      - gnome-themes-extra # Themes
+      - nautilus # File manager
+      - polkit-gnome # Polkit
+      - libadwaita # GTK theme
+      - adwaita-icon-theme # Icons
   when: ansible_distribution == "Archlinux"
 
 - name: Install hyprland aur packages
@@ -33,6 +36,10 @@
       # Cursors
       - rose-pine-cursor
       - rose-pine-hyprcursor
+
+      # Apps
+      - pwvucontrol # Volume control
+      - overskride-bin # Bluetooth
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy hyprland config
@@ -41,3 +48,22 @@
     dest: ~/.config/hypr
     state: link
     force: true
+
+- name: Install xdg-portals packages
+  become: true
+  community.general.pacman:
+    name:
+      - xdg-desktop-portal
+      - xdg-desktop-portal-hyprland
+      - xdg-desktop-portal-gnome
+      - xdg-desktop-portal-gtk
+      - xdg-desktop-portal-wlr
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy xdg-portals config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/xdg-desktop-portal"
+    dest: ~/.config/xdg-desktop-portal
+    state: link
+    force: true
+  when: ansible_distribution == "Archlinux"
