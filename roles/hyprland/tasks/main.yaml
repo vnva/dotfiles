@@ -33,6 +33,9 @@
 - name: Install hyprland aur packages
   kewlfft.aur.aur:
     name:
+      # Core
+      - hyprls-git
+
       # Best cursors
       - rose-pine-cursor
       - rose-pine-hyprcursor
