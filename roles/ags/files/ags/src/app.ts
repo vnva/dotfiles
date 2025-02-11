@@ -2,6 +2,7 @@ import { App, Gtk } from 'astal/gtk3';
 
 import { hyprland } from './utils/hyprland';
 import { Bar } from './widgets/bar/bar';
+import { Launcher } from './widgets/launcher/launchr';
 
 let secondMonitorWidget: Gtk.Widget | null = null;
 
@@ -22,5 +23,7 @@ App.start({
     if (App.get_monitors().length > 1) {
       secondMonitorWidget = Bar({ monitor: 1 });
     }
+
+    Launcher();
   },
 });

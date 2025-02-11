@@ -3,6 +3,9 @@
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "hidden",
   "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "editor.stickyScroll.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
 
   // Fonts
   "editor.fontFamily": "ZedMono Nerd Font",
@@ -35,7 +38,5 @@
   "prettier.semi": true,
 
   // Extensions
-  "cSpell.enabled": false,
-  "workbench.startupEditor": "none",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark"
+  "cSpell.enabled": false
 }

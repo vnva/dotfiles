@@ -21,14 +21,12 @@ $f-w-md: 400;
 $f-w-lg: 600;
 
 * {
-  font-family: 'Inter', 'ZedMono Nerd Font', monospace;
-  font-size: $f-md;
+  all: unset;
 }
 
-button {
-  background: unset;
-  border: unset;
-  padding: unset;
+* {
+  font-family: 'Inter', 'ZedMono Nerd Font', monospace;
+  font-size: $f-md;
 }
 
 @mixin blink-animation($colorA, $colorB) {
