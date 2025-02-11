@@ -1,0 +1,13 @@
+---
+- name: Install tmux package
+  become: true
+  community.general.pacman:
+    name: tmux
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy tmux config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/tmux.conf"
+    dest: ~/.tmux.conf
+    state: link
+    force: true
