@@ -38,5 +38,7 @@
   "prettier.semi": true,
 
   // Extensions
-  "cSpell.enabled": false
+  "cSpell.enabled": false,
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true
 }
