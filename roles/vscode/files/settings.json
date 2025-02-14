@@ -40,5 +40,11 @@
   // Extensions
   "cSpell.enabled": false,
   "workbench.startupEditor": "none",
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Temp
+  "css.validate": false
 }

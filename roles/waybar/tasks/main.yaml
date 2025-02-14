@@ -1,0 +1,13 @@
+---
+- name: Install waybar package
+  become: true
+  community.general.pacman:
+    name: waybar
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy waybar config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/waybar"
+    dest: ~/.config/waybar
+    state: link
+    force: true

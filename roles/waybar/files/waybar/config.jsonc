@@ -1,0 +1,68 @@
+{
+  "reload_style_on_change": true,
+  "height": 24,
+  "spacing": 8,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+  "modules-left": ["hyprland/submap", "hyprland/workspaces", "tray"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["hyprland/language", "clock", "clock#london", "wireplumber", "backlight", "battery"],
+  "hyprland/workspaces": {
+    "format": "{icon}"
+    // "format-window-separator": "  ",
+    // "window-rewrite-default": ""
+    // "window-rewrite": {
+    //   "class<code>": "",
+    //   "class<com.mitchellh.ghostty>": "",
+    //   "class<google-chrome>": "",
+    //   "class<org.telegram.desktop>": ""
+    // }
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}   {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "tooltip": false
+  },
+  "hyprland/submap": {
+    "format": "  {}",
+    "max-length": 20,
+    "tooltip": false
+  },
+  "hyprland/window": {
+    "max-length": 90,
+    "separate-outputs": true
+  },
+  "hyprland/language": {
+    "format-en": "en",
+    "format-ru": "ru"
+  },
+  "clock": {
+    "format": "   {:%H:%M / %d.%m.%Y}",
+    "format-alt": "   {:%H:%M / %a %b %d}",
+    "timezone": "Asia/Krasnoyarsk",
+    "tooltip": false
+  },
+  "clock#london": {
+    "format": "󰌃   {:%H:%M}",
+    "timezone": "Europe/London",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon}   {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "wireplumber": {
+    "format": "{icon}   {volume}%",
+    "format-muted": "",
+    "on-click": "pwvucontrol",
+    "format-icons": ["", "", ""],
+    "tooltip": false
+  }
+}
