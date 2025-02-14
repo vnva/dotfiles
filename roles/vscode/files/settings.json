@@ -19,6 +19,7 @@
   "keyboard.dispatch": "keyCode",
 
   // Editing
+  "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "git.openRepositoryInParentFolders": "always",
   "editor.formatOnSave": true,

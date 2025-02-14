@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cd $HOME/dotfiles/roles/ags/files/ags
-pnpm install
-pnpm build

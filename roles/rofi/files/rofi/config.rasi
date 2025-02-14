@@ -1,0 +1,30 @@
+configuration {
+  combi-modes: [ window, drun ];
+  modes: [ window, drun ];
+  terminal: "ghostty";
+
+  // Timeout from user input.
+  timeout {
+    // The delay after inactivity to execute action.
+    delay: 0;
+    // The action to execute once the delay expires.
+    action: "kb-cancel";
+  }
+
+  sidebar-mode: true;
+
+  // File browser mode.
+  filebrowser {
+    sorting-method:    "name";
+    directories-first: true;
+  }
+
+  display-drun:               "   Apps";
+  display-run:                "   Run";
+  display-filebrowser:        "   Files";
+  display-window:             "   Windows";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{t}";
+}
+
+@theme "theme"

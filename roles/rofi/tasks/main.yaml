@@ -1,0 +1,13 @@
+---
+- name: Install rofi package
+  become: true
+  community.general.pacman:
+    name: rofi-wayland
+  when: ansible_distribution == "Archlinux"
+
+- name: Deploy rofi config
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/rofi"
+    dest: ~/.config/rofi
+    state: link
+    force: true

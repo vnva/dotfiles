@@ -1,0 +1,77 @@
+* {
+  font: "Inter 11";
+
+  background-color: transparent;
+  text-color: #ffffff;
+
+  margin: 0px;
+  padding: 0px;
+  spacing: 0px;
+}
+
+window {
+  padding: 20px;
+  width: 40%;
+  height: 50%;
+  location: center;
+  background-color: #1E1E1E;
+  border-radius: 5px;
+}
+
+inputbar {
+  spacing: 12px;
+  children: [ entry ];
+  background-color: #292929;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+
+entry {
+  margin: 10px 12px;
+}
+
+prompt, entry, element-text, element-icon {
+  vertical-align: 0.5;
+}
+
+prompt {
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  fixed-height:   false;
+}
+
+element {
+  padding: 10px;
+  border-radius: 5px;
+  children: [ element-icon, element-text ];
+}
+
+element-icon {
+  margin: 0 10px 0 0;
+}
+
+element selected {
+  background-color: #3C3C3C;
+}
+
+mode-switcher{
+  spacing: 10px;
+  expand: false;
+  margin: 0px 10%;
+}
+
+button {
+  font: "Inter 10";
+  padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  background-color: #292929;
+  margin: 0 0 5px; 
+}
+
+button selected {
+  background-color: #15539E;
+}
