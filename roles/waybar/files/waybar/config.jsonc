@@ -31,7 +31,7 @@
     "tooltip": false
   },
   "hyprland/window": {
-    "max-length": 90,
+    "max-length": 60,
     "separate-outputs": true
   },
   "hyprland/language": {
