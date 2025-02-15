@@ -19,6 +19,7 @@ default_roles:
   - logiops
   - waybar
   - rofi
+  - htop
 
 git:
   name: Vyacheslav Ananev
