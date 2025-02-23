@@ -3,12 +3,25 @@
   gather_facts: true
 
   pre_tasks:
+    # - name: Determine if the system is a laptop or desktop
+      # ansible.builtin.set_fact:
+      #   system_type: >-
+      #     {%- if ansible_facts['ansible_chass'] == 'System76 Laptop' -%}
+      #     laptop
+      #     {%- else -%}
+      #     desktop
+      #     {%- endif -%}
+
     - name: Include pre_tasks
       ansible.builtin.include_tasks: "{{ item }}"
       loop:
         - pre_tasks/packages.yaml
 
   tasks:
+    - name: Print all available facts
+      ansible.builtin.debug:
+        var: ansible_facts
+
     - name: Set roles
       ansible.builtin.set_fact:
         # run_roles: "{{ ansible_run_tags != ['all'] and ansible_run_tags or default_roles | difference(exclude_roles | default([])) | sort }}"
