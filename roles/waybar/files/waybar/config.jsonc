@@ -23,7 +23,14 @@
     "device": "intel_backlight",
     "format": "{icon}   {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "brightnessctl set 1-",
+    "on-click-middle": "brightnessctl set 1-",
+    "on-click-right": "brightnessctl set 1-",
+    "on-update": "",
+    "on-scroll-up": "brightnessctl set 1+",
+    "on-scroll-down": "brightnessctl set 1-",
+    "smooth-scrolling-threshold": 1
   },
   "hyprland/submap": {
     "format": "  {}",

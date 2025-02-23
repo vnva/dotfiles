@@ -2,7 +2,10 @@
 - name: Install rofi package
   become: true
   community.general.pacman:
-    name: rofi-wayland
+    name:
+      - rofi-wayland
+      - rofi-calc
+      - rofi-emoji
   when: ansible_distribution == "Archlinux"
 
 - name: Deploy rofi config

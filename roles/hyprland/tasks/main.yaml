@@ -4,9 +4,11 @@
   community.general.pacman:
     name:
       # Core
+      - uwsm
       - hyprland
       - hyprpaper
       - hyprlock
+      - hyprsunset
 
       # Utils
       - jq # JSON parser

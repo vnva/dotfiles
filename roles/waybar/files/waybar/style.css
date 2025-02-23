@@ -1,6 +1,6 @@
 * {
   font-family: Inter, ZedMono Nerd Font;
-  font-size: 13px;
+  font-size: 12px;
   padding: 0;
   margin: 0;
   background: transparent;
@@ -9,11 +9,18 @@
 button {
   padding: 0;
   margin: 0;
+  border: 0;
 }
 
 window#waybar {
   background: transparent;
   border-radius: 5px;
+}
+
+tooltip,
+menu {
+  background: @theme_base_color;
+  border-color: @theme_base_color;
 }
 
 #workspaces {
@@ -22,7 +29,7 @@ window#waybar {
 }
 
 #workspaces button {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   padding: 0 4px;
   font-weight: 500;
   margin-right: 5px;
@@ -34,25 +41,25 @@ window#waybar {
 }
 
 #clock {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
 
 #battery {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
 
 #tray {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
 
 #window {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
@@ -62,7 +69,7 @@ window#waybar.empty #window {
 }
 
 #language {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
@@ -75,13 +82,13 @@ window#waybar.empty #window {
 }
 
 #backlight {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
 
 #wireplumber {
-  background: @theme_bg_color;
+  background: @theme_base_color;
   border-radius: 5px;
   padding: 0 8px;
 }
