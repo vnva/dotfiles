@@ -5,6 +5,7 @@ source $HOME/dotfiles/roles/zsh/files/variables.sh
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$HOME2/.awscliv2/binaries:$PATH"
 export TEMP_ZSH_DIR=~/.temp/zsh
 
 # HISTORY
@@ -59,7 +60,7 @@ source <(carapace _carapace)
 # pnpm
 export PNPM_HOME="/home/vnva/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end

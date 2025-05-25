@@ -3,15 +3,6 @@
   gather_facts: true
 
   pre_tasks:
-    # - name: Determine if the system is a laptop or desktop
-      # ansible.builtin.set_fact:
-      #   system_type: >-
-      #     {%- if ansible_facts['ansible_chass'] == 'System76 Laptop' -%}
-      #     laptop
-      #     {%- else -%}
-      #     desktop
-      #     {%- endif -%}
-
     - name: Include pre_tasks
       ansible.builtin.include_tasks: "{{ item }}"
       loop:

@@ -1,14 +1,13 @@
 {
   // UI Settings
-  "github.copilot.enable": {
-    "*": false
-  },
+  "window.titleBarStyle": "native",
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "hidden",
-  "workbench.colorTheme": "Min Dark",
   "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "editor.stickyScroll.enabled": false,
   "workbench.tree.enableStickyScroll": false,
+  "git.blame.editorDecoration.enabled": true,
+  "update.showReleaseNotes": false,
 
   // Fonts
   "editor.fontFamily": "ZedMono Nerd Font",
@@ -32,6 +31,9 @@
   "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[mdx]": {
+    "editor.wordWrap": "on"
+  },
 
   // Prettier
   "prettier.enable": true,
@@ -50,5 +52,14 @@
   },
 
   // Temp
-  "css.validate": false
+  "css.validate": false,
+  "workbench.colorTheme": "Vague",
+  "chat.commandCenter.enabled": false,
+  "vue.server.hybridMode": "typeScriptPluginOnly",
+  "roo-cline.allowedCommands": ["npm test", "npm install", "tsc", "git log", "git diff", "git show"],
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false
+  // "debug.javascript.terminalOptions": {
+  //   "command": "proxy-ns npm start"
+  // }
 }
