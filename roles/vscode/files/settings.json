@@ -53,12 +53,12 @@
 
   // Temp
   "css.validate": false,
-  "workbench.colorTheme": "Vague",
   "chat.commandCenter.enabled": false,
   "vue.server.hybridMode": "typeScriptPluginOnly",
   "roo-cline.allowedCommands": ["npm test", "npm install", "tsc", "git log", "git diff", "git show"],
   "workbench.layoutControl.enabled": false,
-  "window.commandCenter": false
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Oscura Dusk"
   // "debug.javascript.terminalOptions": {
   //   "command": "proxy-ns npm start"
   // }
